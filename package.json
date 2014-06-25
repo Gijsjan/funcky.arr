@@ -4,12 +4,13 @@
   "description": "",
   "main": "dist/index.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --recursive -w --compilers coffee:coffee-script/register,jade:jade --reporter spec tests/unit/*"
   },
   "author": "gijsjan.brouwer@huygens.knaw.nl (https://github.com/Gijsjan)",
   "license": "ISC",
   "devDependencies": {
     "browserify": "^4.1.8",
+    "chai": "^1.9.1",
     "coffee-script": "^1.7.1",
     "coffeeify": "^0.6.0",
     "gulp": "^3.7.0",
@@ -20,6 +21,7 @@
     "gulp-streamify": "0.0.5",
     "gulp-uglify": "^0.3.0",
     "gulp-util": "^2.2.16",
+    "mocha": "^1.20.1",
     "rimraf": "^2.2.8",
     "vinyl-source-stream": "^0.1.1"
   }
