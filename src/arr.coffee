@@ -11,13 +11,6 @@ module.exports = (arr) ->
     sum: ->
       return 0 if arr.length is 0
       arr.reduce (prev, current) -> current + prev
-        
-    equals: (arr2) ->
-      return true if arr is arr2
-      return false if not arr? or not arr2?
-      return false if arr.length isnt arr2.length
 
-      for element, index in arr
-        return false if arr[index] isnt arr2[index]
-
-      true
+    # http://stackoverflow.com/questions/3115982/how-to-check-javascript-array-equals
+    equals: (arr2) -> JSON.stringify(arr) is JSON.stringify(arr2)
